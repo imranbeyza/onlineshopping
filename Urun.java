@@ -1,0 +1,47 @@
+
+package com.mycompany.onlinealisveris;
+
+import java.util.Objects;
+
+public class Urun {
+    private Long id;
+   
+    public void Urun(String id){//single responsibility principle 
+        
+    }
+  
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 37 * hash + Objects.hashCode(this.id);
+        
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        return false;
+    }
+    
+  public  Urun(Long id) {
+        this.id = id;
+      
+    }
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+}
+    
